@@ -4,7 +4,7 @@
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Project Status: WIP](https://img.shields.io/badge/status-work_in_progress-yellow.svg)](#)
-[![Discord](https://img.shields.io/badge/discord-join_chat-7289DA.svg?style=flat&logo=discord)](https://discord.gg/msxrpayZvB)
+[![Discord](https://img.shields.io/badge/discord-join_chat-7289DA.svg?style=flat&logo=discord)](https://discord.gg/your-discord-invite-link)
 [![Documentation](https://img.shields.io/badge/documentation-in_progress-orange.svg)](#)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
@@ -39,19 +39,19 @@ A standalone, non-intelligent service for advanced conversation state management
 The Lilith Context Manager is a foundational component of the broader Lilith AI ecosystem. Its design is governed by a strict "separation of concerns" principle. 
 
 1.  **The context-manager is a specialized tool, not a brain.** It is responsible only for managing the *structure* of a conversation.  All intelligence, decision-making, and interpretation of content are handled by its primary consumer, the `lilith-orchestrator`. 
-2.  **Communication is explicit.** The CWM operates on a command-based interaction model.  The Orchestrator issues direct commands to the CWM (e.g., start session, add turn, get context), and the CWM executes them according to its predefined rules. 
+2.  **Communication is explicit.** The context manager operates on a command-based interaction model.  The Orchestrator issues direct commands to the context manager (e.g., start session, add turn, get context), and the context manager executes them according to its predefined rules. 
 3.  **Data integrity is paramount.** The use of atomic writes and strict Pydantic data models guarantees that the state of a conversation is never corrupted and that all components speak the same language. 
 
-This architecture ensures that the CWM is a reliable, reusable, and highly focused piece of infrastructure that can be used in any AI project that requires sophisticated context management.
+This architecture ensures that the context manager is a reliable, reusable, and highly focused piece of infrastructure that can be used in any AI project that requires sophisticated context management.
 
-<p align="center">
+
 ```mermaid
- A((Orchestrator)) -->|1. Sends Commands via HTTP| B(CWM Service);
-B -->|2. Reads/Writes JSON Data| C[(Persistent Storage)];
-C -->|3. Provides Session Data| B;
-B -->|4. Returns Results via HTTP| A; 
+graph TD
+A((Orchestrator)) -->|Send Command| B(CWM Service)
+B -->|Read/Write JSON| C[(Persistent Storage)]
+C -->|Provide Session| B
+B -->|Return Result| A
 ```
-</p>
 
 
 ## 🚀 Getting Started
