@@ -4,7 +4,7 @@
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Project Status: WIP](https://img.shields.io/badge/status-work_in_progress-yellow.svg)](#)
-[![Discord](https://img.shields.io/badge/discord-join_chat-7289DA.svg?style=flat&logo=discord)](https://discord.gg/your-discord-invite-link)
+[![Discord](https://img.shields.io/badge/discord-join_chat-7289DA.svg?style=flat&logo=discord)](https://discord.gg/msxrpayZvB)
 [![Documentation](https://img.shields.io/badge/documentation-in_progress-orange.svg)](#)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
