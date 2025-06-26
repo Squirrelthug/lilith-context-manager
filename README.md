@@ -47,7 +47,7 @@ This architecture ensures that the context manager is a reliable, reusable, and 
 
 ```mermaid
 graph TD
-A((Orchestrator)) -->|Send Command| B(CWM Service)
+A((Orchestrator)) -->|Send Command| B(LCM Service)
 B -->|Read/Write JSON| C[(Persistent Storage)]
 C -->|Provide Session| B
 B -->|Return Result| A
