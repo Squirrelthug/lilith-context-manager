@@ -3,6 +3,7 @@
 <div align="center">
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Pydantic v1](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/pydantic/pydantic/main/docs/badge/v1.json)](https://pydantic.dev)
 [![Project Status: WIP](https://img.shields.io/badge/status-work_in_progress-yellow.svg)](#)
 [![Discord](https://img.shields.io/badge/discord-join_chat-7289DA.svg?style=flat&logo=discord)](https://discord.gg/msxrpayZvB)
 [![Documentation](https://img.shields.io/badge/documentation-in_progress-orange.svg)](#)
