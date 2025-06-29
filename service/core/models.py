@@ -15,7 +15,7 @@ class ContentType(str, Enum):
     FILE_URI = "file_uri"
 
 
-class ContentPart(BaseModel):
+class ContentLink(BaseModel):
     """Represents a single piece of content within a turn."""
 
     content_type: ContentType = Field(
