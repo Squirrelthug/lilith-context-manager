@@ -63,6 +63,15 @@ class BranchSummary(BaseModel):
     )
 
 
+class Turn(BaseModel):
+    """
+    Represents a single turn in a conversation.
+    """
+    turn_id: str = Field(
+        default_factory=lambda: str(uuid.uuid4()),
+        description="A unique identifier for this specific turn.",
+    )
+
 class Branch(BaseModel):
     """Represents a single 'branch' of a conversation."""
 
