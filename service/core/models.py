@@ -63,29 +63,7 @@ class BranchSummary(BaseModel):
     )
 
 
-class Turn(BaseModel):
-    """Represents a single turn in a conversation."""
 
-    turn_id: str = Field(
-        default_factory=lambda: str(uuid.uuid4()),
-        description="A unique identifier for this specific turn.",
-    )
-    timestamp: datetime = Field(
-        default_factory=lambda: datetime.now(timezone.utc),
-        description="The UTC timestamp when the turn was recorded.",
-    )
-    actor_id: str = Field(
-        ...,
-        description="The unique identifier of the actor (user or system) who generated the text for this turn.",
-    )
-    content: List[ContentPart] = Field( # This is the line we need to change
-        ..., 
-        description="A list of content parts that make up this turn."
-    )
-    reply_to_turn_id: Optional[str] = Field(
-        None,
-        description="ID of the turn this turn is replying to, if any, to extend or continue in a branch.",
-    )
 
 class Branch(BaseModel):
     """Represents a single 'branch' of a conversation."""
