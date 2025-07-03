@@ -63,6 +63,9 @@ class BranchSummary(BaseModel):
     )
 
 
+class Turn(BaseModel):
+    nullable = True
+
 
 
 class Branch(BaseModel):
