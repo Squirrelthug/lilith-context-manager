@@ -1,6 +1,6 @@
 import os
 import pathlib
-from .models.py import Session
+from .models import Session
 
 
 def create_new_session() -> Session:
@@ -13,7 +13,7 @@ def create_new_session() -> Session:
     session_id = new_session.session_id
 
     # Create a directory for the session
-    session_dir = pathlib.Path(f"active_session/{session_id}")
+    session_dir = pathlib.Path(f"active_sessions/{session_id}")
     session_dir.mkdir(parents=True, exist_ok=True)
 
     # Define the final and temp paths inside the new directory
@@ -27,7 +27,7 @@ def create_new_session() -> Session:
             f.write(new_session.model_dump_json(indent=4))
             
         # If the write is successful, attomically rename the temp file.
-        os.rename(temp_file_path, final_file_path))
+        os.rename(temp_file_path, final_file_path)
         
     except IOError as e:
         print(f"Error saving session {session_id}: {e}")
