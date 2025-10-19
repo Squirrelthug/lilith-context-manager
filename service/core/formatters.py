@@ -26,7 +26,7 @@ def serialize_turn_line(turn: Turn) -> str:
 
     # Map each content part to compact JSON
     parts_compact = [
-        {"type": str(p.content_type), "payload": p.payload}
+        {"type": p.content_type.value, "payload": p.payload}
         for p in turn.content
     ]
 

@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Body, HttpException
+from fastapi import FastAPI, Body, HTTPException
 from pathlib import Path
 import json
 from .core.tracker import create_new_session
@@ -20,7 +20,7 @@ def _read_session_json(session_id: str):
     sdir = _session_dir(session_id)
     sfile = sdir / "session.json"
     if not sfile.exists():
-        raise HttpException(status_code=404, detail="Session not found")
+        raise HTTPException(status_code=404, detail="Session not found")
     return json.loads(sfile.read_text())
 
 def _write_json_atomic(path: Path, data: dict) -> None:
@@ -91,7 +91,7 @@ def add_turn(session_id: str, turn: Turn = Body(...)):
 
     # Reject empty content early
     if not turn.content:
-        raise HttpException(status_code=400, detail="Turn.content must contain at least 1 part.")
+        raise HTTPException(status_code=400, detail="Turn.content must contain at least 1 part.")
 
     # Read sesson.json (dict) and ensure branch exists
     session_data = _read_session_json(session_id)
