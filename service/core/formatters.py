@@ -1,7 +1,5 @@
 from __future__ import annotations
 import json
-
-import json
 from datetime import timezone
 from .models import Turn
 
@@ -22,7 +20,7 @@ def serialize_turn_line(turn: Turn) -> str:
     
     reply_suffix = (
         f" | reply_to={turn.reply_to_turn_id}"
-        if getattr(turn, "replay_to_turn_id", None)
+        if getattr(turn, "reply_to_turn_id", None)
         else ""
     )
 
