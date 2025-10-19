@@ -1,0 +1,3 @@
+2025-10-19T22:02:08.470497Z | turn=5a1856e2-c039-4d17-a86b-1e36b8ae03fe | actor=user:steven | parts=1 | parts_json=[{"type":"ContentType.TEXT","payload":"First line from user, testing append."}]
+2025-10-19T22:08:56.629017Z | turn=f9e9e21d-fed4-4e49-89c9-3838a5d13a85 | actor=user:steven | parts=1 | parts_json=[{"type":"ContentType.TEXT","payload":"Second line after enum fix."}]
+2025-10-19T22:16:27.682967Z | turn=be721934-ea44-497f-96da-e4a13b4a5836 | actor=user:steven | parts=1 | parts_json=[{"type":"text","payload":"Second line after enum fix."}]

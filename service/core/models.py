@@ -42,7 +42,7 @@ class Turn(BaseModel):
         ...,
         description="The unique identifier of the actor (user or system) who generated the text for this turn.",
     )
-    content: List[ContentPart] = Field(
+    content: List[ContentLink] = Field(
         ..., description="A list of content parts that make up this turn."
     )
     reply_to_turn_id: Optional[str] = Field(
